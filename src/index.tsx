@@ -4,8 +4,10 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createStore } from "redux";
+import allReducer from "./Redux/reducers/index";
 
-// store globalized state
+// store globalized state, pass reducer into store but only 1 => combine
+const store = createStore(allReducer);
 // action describe what u wanna do: im hungry (not buy food yet)
 // reducer how action transform state to state
 // dispatch: take action
